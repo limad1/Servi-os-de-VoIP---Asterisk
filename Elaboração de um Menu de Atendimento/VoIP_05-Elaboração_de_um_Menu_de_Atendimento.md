@@ -26,8 +26,10 @@ Instruções adicionais: https://wiki.asterisk.org/wiki/display/AST/Asterisk+13+
 
 Por fim, para escutar o áudio, use a aplicação PlayBack, já vista em sala.
 
-Exemplo: PlayBack(arquivo_de_som)
-
+Exemplo: 
+~~~
+PlayBack(arquivo_de_som)
+~~~
 Veja o exemplo a seguir de uma extensão que usa estas aplicações:
 ~~~
 exten => 300,1,Answer()
