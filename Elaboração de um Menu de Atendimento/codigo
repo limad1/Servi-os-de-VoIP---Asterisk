@@ -1,0 +1,32 @@
+; Acrescentado as seguintes linhas no arquivo "extensions.conf" localizado no "/etc/asterisk":
+
+; Pode adicionar a linha abaixo em um contexto global.
+exten => 4305,1,Goto(MeuMenu,start,1)	; add this to the end of the
+					; [LocalSets] context
+
+
+[MeuMenu]
+exten => start,1,Answer()
+        same => n,Espeak("Após o fim desta mensagem, digite 1 para gravar um áudio, 2 para escutar o áudio gravado, 3 para escutar meu nome completo ou 0 para sair", any)
+        same => n,WaitExten(10)
+        same => n,Goto(MeuMenu,start,1)
+
+; Opção 1: Gravar um áudio
+exten => 1,1,Record(//var//lib//asterisk//sounds//pt_BR//gravacao:gsm)
+        same => n,Goto(MeuMenu,start,1)
+
+; Opção 2: Escutar o áudio gravado
+exten => 2,1,Playback(gravacao)
+        same => n,Goto(MeuMenu,start,1)
+
+; Opção 3: Escutar o nome completo (substitua 'nome-completo' pelo nome do arquivo gravado)
+exten => 3,1,Playback(nome-completo)
+        same => n,Goto(MeuMenu,start,1)
+
+; Opção 0: Sair
+exten => 0,1,Playback(vm-goodbye)
+        same => n,Hangup()
+
+; Opção inválida
+exten => i,1,Playback(opcao-invalida)
+        same => n,Goto(MeuMenu,start,1)
