@@ -32,4 +32,5 @@ Para implantar o VoIP, é preciso seguir alguns passos:
 - Testar a qualidade e o funcionamento do sistema;
 - Treinar os usuários para usar o VoIP.
 
-Uma ferramenta que pode ajudar na implantação do VoIP é o Asterisk, um framework de código aberto para construir aplicações de comunicação baseadas em VoIP. O Asterisk permite criar soluções personalizadas e flexíveis para diferentes cenários e necessidades. Esta matéria faz parte do curso de Redes de Computadores, que tem como objetivo preparar os alunos para planejar, instalar, configurar e administrar redes de dados, voz e imagem. Nesta matéria, usa-se o Asterisk, um framework de código aberto para criar aplicações de comunicação baseadas em VoIP.
+Uma ferramenta que pode ajudar na implantação do VoIP é o Asterisk, um framework de código aberto para construir aplicações de comunicação baseadas em VoIP. O Asterisk permite criar soluções personalizadas e flexíveis para diferentes cenários e necessidades. Esta matéria ministrada pelo Professor Teobaldo Adelino Dantas de Medeiros
+(http://www.teobaldo.pro.br/) faz parte do curso de Redes de Computadores, que tem como objetivo preparar os alunos para planejar, instalar, configurar e administrar redes de dados, voz e imagem. Nesta matéria, usa-se o Asterisk, um framework de código aberto para criar aplicações de comunicação baseadas em VoIP.
